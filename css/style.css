@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f5fc;
+  font-family: 'Inter';
+}
+
+/* Maquetado Mobile 375px */
+
+.contenedor {     /* Contenedor Principal */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 700px 193px 40px;
+  height: 933px;
+  grid-template-areas: 
+      "uno"
+      "dos"
+      "tres";
+}
+.contenedor-encriptar {     /* Contenedor Encriptar */
+  /* background: lightgray; */
+  grid-area: uno;
+  position: relative;
+}
+.logo, .texto-encriptar, .terminos, .contenedor-btn {
+  position: absolute;
+  left: 16px;
+}
+.logo {
+  top: 4%;
+}
+.texto-encriptar {
+  background: none;
+  top: 152px;
+  width: 90%;
+  height: 42%;
+  border: none;
+  resize: none;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0a3871;
+}
+.texto-encriptar::placeholder {
+  font-family: 'Inter';
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0a3871;
+}
+.texto-encriptar:focus, .texto-encriptar:active {
+  border: none;
+  outline: none;
+}
+.terminos {
+  top: 451px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #495057;
+}
+.btn {
+  width: 340px;
+  height: 67px;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.contenedor-btn {
+  /* background: plum; */
+  top: 485px;
+  width: 90%;
+  height: 24%;
+}
+.btn-encriptar {
+  background: #0a3871;
+  color: #ffffff;
+  margin-bottom: 1.6rem;
+}
+.btn-desencriptar, .btn-copiar {
+  background: #ffffff;
+  color: #0a3871;
+}
+
+
+
+.contenedor-encriptado {     /* Contenedor Desencriptar */
+  /* background: lightpink; */
+  grid-area: dos;
+  position: relative;
+}
+.muneco, .btn-copiar {
+  display: none;
+  visibility: hidden;
+}
+.texto-encriptado, .contenedor-texto, .btn-copiar {
+  position: absolute;
+  left: 16px;
+}
+.texto-encriptado {
+  top: 10%;
+  width: 90%;
+  height: 80%;
+  padding: 5%;
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.5);
+  border: none;
+  resize: none;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0a3871;
+}
+.texto-encriptado:focus, .texto-encriptado:active {
+  border: none;
+  outline: none;
+}
+.contenedor-texto {
+  top: 25%;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  color: #343a40;
+}
+.titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.parrafo {
+  font-size: 1rem;
+  width: 400;
+}
+
+
+
+.contenedor-pie {     /* Contenedor Pie de Página */
+  /* background: lightskyblue; */
+  grid-area: tres;
+  position: relative;
+}
+.copyright {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: #495057;
+}
+
+
+
+/* Maquetado Tablet 765px */
+@media (width > 375px) {
+  .contenedor {
+    grid-template-rows: 83vh 14vh 3vh;
+    height: 1174px;
+  }
+
+  /* Contenedor Encriptar */
+  .logo, .texto-encriptar, .terminos, .contenedor-btn {
+    left: 40px;
+  } 
+  .logo {
+    top: 8%;
+  }
+  .texto-encriptar {
+    top: 240px;
+  }
+  .terminos {
+    top: 836px;
+  }
+  .contenedor-btn {
+    top: 870px;
+    height: 7%;
+  }
+  .btn-encriptar {
+    margin-bottom: 0rem;
+    margin-right: 0.4rem;
+  }
+
+  /* Contenedor Encriptado */
+  .texto-encriptado, .contenedor-texto {
+    left: 40px;
+  }
+  .texto-encriptado {
+    top: 10%;
+    width: 688px;
+    height: 133px;
+  }
+  .contenedor-texto {
+    top: 35%;
+    width: 688px;
+  }
+}
+
+/* Maquetado Desktop 1440px */
+@media (width > 768px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 97vh 3vh;
+    min-height: 1024px;
+    grid-template-areas: 
+        "uno uno dos"
+        "tres tres tres";
+  }
+
+  /* Contenedor Encriptar */
+  .texto-encriptar, .terminos, .contenedor-btn {
+    position: absolute;
+    left: 240px;
+  }
+  .logo {
+    top: 40px;
+    left: 80px;
+  }
+  .texto-encriptar {
+    width: 70%;
+    height: 60%;
+  }
+  .terminos {
+    top: 851px;
+  }
+  .contenedor-btn {
+    top: 885px;
+    width: 72%;
+    height: 7%;
+  }
+  .btn {
+    width: 328px;
+  }
+  .btn-encriptar {
+    margin-bottom: 0;
+    margin-right: 0.7rem;
+  }
+
+  /* Contenedpr Encriptado */
+  .texto-encriptado, .muneco, .contenedor-texto, .btn-copiar {
+    position: absolute;
+    left: 12%;
+    align-content: center;
+  }
+  .texto-encriptado {
+    top: 40px;
+    left: 0;
+    width: 90%;
+    height: 920px;
+  }
+  .contenedpr-texto {
+    top: 50%;
+  }
+  .muneco {
+    top: 283px;
+    width: 336px;
+    display: block;
+    visibility: visible;
+  }
+  .contenedor-texto {
+    top: 619px;
+    width: 336px;
+  }
+  .contenedor-pie {
+    position: absolute;
+    top: 1000px;
+    width: 100%;
+  }
+}
